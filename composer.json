@@ -1,0 +1,14 @@
+{
+    "name": "scipper/classloader",
+    "type": "library",
+    "description": "my commonly used classloader.",
+    "keywords": ["classloader"],
+    "homepage": "http://myscipper.de",
+    "license": "GNU GENERAL PUBLIC LICENSE v3",
+    "authors": [
+        {"name": "Steffen Kowalski", "email": "scipper@myscipper.de"}
+    ],
+    "require": {
+        "php": ">=5.4"
+    }
+}
