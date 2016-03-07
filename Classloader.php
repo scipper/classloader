@@ -1,14 +1,11 @@
 <?php
 
-namespace classloader;
-
 /**
  * 
- * @author Steffen Kowalski <sk@traiwi.de>
+ * @author Steffen Kowalski <scipper@myscipper.de>
  *
  * @since 11.12.2014
- * @namespace classloader
- * @package classloader
+ * @package Classloader
  *
  */
 class Classloader {
@@ -17,30 +14,30 @@ class Classloader {
 	 * 
 	 * @var string
 	 */
-	private $include_path;
+	protected $ip;
 	
 	/**
 	 * 
 	 * @var string
 	 */
-	private $dir_separator;
+	protected $ds;
 	
 	/**
 	 * 
 	 * @var string
 	 */
-	private $file_extension;
+	protected $fe;
 	
 	/**
 	 * 
-	 * @param string $include_path
-	 * @param string $dir_separator
-	 * @param string $file_extension
+	 * @param string $ip
+	 * @param string $ds
+	 * @param string $fe
 	 */
-	public function __construct($include_path = null, $dir_separator = DIRECTORY_SEPARATOR, $file_extension = ".php") {
-		$this->include_path = $include_path;
-		$this->dir_separator = $dir_separator;
-		$this->file_extension = $file_extension;
+	public function __construct($ip = null, $ds = DIRECTORY_SEPARATOR, $fe = ".php") {
+		$this->ip = $ip;
+		$this->ds = $ds;
+		$this->fe = $fe;
 	}
 	
 	/**
@@ -63,8 +60,8 @@ class Classloader {
 	 * @return boolean
 	 */
 	public function autoload($class) {
-		$class = str_replace("\\", $this->dir_separator, $class);
-		$file = $this->include_path.$this->dir_separator.$class.$this->file_extension;
+		$class = str_replace("\\", $this->ds, $class);
+		$file = $this->ip . $this->ds . $class . $this->fe;
 		if(is_readable($file)) {
 			require_once $file;
 			return true;
