@@ -1,11 +1,14 @@
 <?php
 
+namespace Scipper\Classloader;
+
 /**
  * 
  * @author Steffen Kowalski <scipper@myscipper.de>
  *
  * @since 11.12.2014
- * @package Classloader
+ * @namespace Scipper\Classloader
+ * @package Scipper\Classloader
  *
  */
 class Classloader {
