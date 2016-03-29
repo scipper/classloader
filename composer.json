@@ -2,16 +2,23 @@
     "name": "scipper/classloader",
     "type": "library",
     "description": "my commonly used classloader.",
-    "keywords": ["classloader"],
+    "keywords": [
+        "classloader"
+    ],
     "homepage": "http://myscipper.de",
     "license": "GNU GENERAL PUBLIC LICENSE v3",
     "authors": [
-        {"name": "Steffen Kowalski", "email": "scipper@myscipper.de"}
+        {
+            "name": "Steffen Kowalski",
+            "email": "scipper@myscipper.de"
+        }
     ],
     "require": {
         "php": ">=5.4"
     },
     "autoload": {
-        "psr-4": { "Scipper\\Classloader\\": "src/" }
+        "psr-4": {
+            "Scipper\\Classloader\\": "src/"
+        }
     }
 }
